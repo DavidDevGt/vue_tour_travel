@@ -1,11 +1,11 @@
 <template>
   <v-app-bar height="80" color="#FEF5F8" scroll-behavior="elevate" id="inspire">
-    <v-app-bar-title class="text-h4">Explore</v-app-bar-title>
+    
     <v-img class="" src="/1.png"></v-img>
     <v-spacer></v-spacer>
     <v-menu transition="slide-x-transition">
       <template v-slot:activator="{ props }">
-        <v-btn color="#6347F9" v-bind="props">Home +</v-btn>
+        <v-btn color="#165EA5" v-bind="props">Home +</v-btn>
       </template>
       <v-list>
         <v-list-item>
@@ -17,7 +17,7 @@
 
     <v-menu transition="slide-x-transition">
       <template v-slot:activator="{ props }">
-        <v-btn color="#6347F9" v-bind="props">Tours +</v-btn>
+        <v-btn color="#165EA5" v-bind="props">Tours +</v-btn>
       </template>
       <v-list>
         <v-list-item>
@@ -30,13 +30,13 @@
 
     <v-menu transition="slide-x-transition">
       <template v-slot:activator="{ props }">
-        <v-btn color="#6347F9" v-bind="props">Hotel</v-btn>
+        <v-btn color="#165EA5" v-bind="props">Hotel</v-btn>
       </template>
     </v-menu>
 
     <v-menu transition="slide-x-transition">
       <template v-slot:activator="{ props }">
-        <v-btn color="#6347F9" v-bind="props">Pages +</v-btn>
+        <v-btn color="#165EA5" v-bind="props">Pages +</v-btn>
       </template>
       <v-list>
         <v-list-item>
@@ -50,13 +50,13 @@
 
     <v-menu transition="slide-x-transition">
       <template v-slot:activator="{ props }">
-        <v-btn color="#6347F9" v-bind="props">Blog</v-btn>
+        <v-btn color="#165EA5" v-bind="props">Blog</v-btn>
       </template>
     </v-menu>
 
     <v-menu transition="slide-x-transition">
       <template v-slot:activator="{ props }">
-        <v-btn color="#6347F9" v-bind="props">Contact</v-btn>
+        <v-btn color="#165EA5" v-bind="props">Contact</v-btn>
       </template>
     </v-menu>
     <v-btn
@@ -78,6 +78,6 @@ export default {};
 <style scope>
 .expl {
   background-color: white;
-  color: #6347f9;
+  color: #165EA5;
 }
 </style>
