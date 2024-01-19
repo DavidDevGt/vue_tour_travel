@@ -159,7 +159,7 @@
                       <v-img src="/5.png" cover height="100%">
                         <div class="d-flex flex-row-reverse">
                           <v-btn
-                            class="text-none"
+                          class="text-none mr-2 mt-2"
                             color="indigo-lighten-1"
                             size="x-large"
                             variant="flat"
