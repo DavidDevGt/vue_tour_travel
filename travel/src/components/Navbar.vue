@@ -10,6 +10,7 @@
         <v-list-item>
           <v-list-item-title>Home Page One</v-list-item-title>
           <v-list-item-title>Home Page Two</v-list-item-title>
+          <v-list-item-title>Home Layout</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-menu>
