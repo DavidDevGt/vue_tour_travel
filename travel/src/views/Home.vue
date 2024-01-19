@@ -16,7 +16,8 @@
                 exercitationem quos doloribus quas.
               </p>
               <v-btn
-                class="text-noe mt-8 bt1"
+                class="text-noe mt-8 bt1 animate__animated"
+                @mouseover="animateButton"
                 color="indigo-lighten-1"
                 size="x-large"
                 variant="flat"
@@ -145,10 +146,7 @@
           <v-row justify="center">
             <v-col cols="12" sm="10">
               <v-row>
-                <v-col
-                  cols="12"
-                  sm="4"
-                >
+                <v-col cols="12" sm="4">
                   <v-hover v-slot="{ isHovering, props }">
                     <v-card
                       :elevation="isHovering ? 12 : 2"
@@ -159,7 +157,7 @@
                       <v-img src="/5.png" cover height="100%">
                         <div class="d-flex flex-row-reverse">
                           <v-btn
-                          class="text-none mr-2 mt-2"
+                            class="text-none mr-2 mt-2"
                             color="indigo-lighten-1"
                             size="x-large"
                             variant="flat"
@@ -287,11 +285,7 @@
                     </v-col>
                   </v-row>
                 </v-col>
-                <v-col
-
-                  cols="12"
-                  sm="4"
-                >
+                <v-col cols="12" sm="4">
                   <v-hover v-slot="{ isHovering, props }">
                     <v-card
                       :elevation="isHovering ? 12 : 2"
@@ -396,13 +390,14 @@
                         ></v-rating>
                         <v-spacer></v-spacer>
                         <v-btn
-                          class="text-none"
+                          class="text-none animate__animated"
+                          @mouseover="animateButton"
                           color="indigo-lighten-1"
                           size="large"
                           variant="flat"
                           rounded="0"
                           elevation="6"
-                          >$1200</v-btn
+                          >$1500</v-btn
                         >
                       </v-card-actions>
                     </v-card>
@@ -419,7 +414,12 @@
             <v-col cols="12" sm="10">
               <v-row>
                 <v-col cols="12" sm="2" v-for="(offer, i) in offers" :key="i">
-                  <v-card class="mx-auto px-2 pt-6" height="200px" flat>
+                  <v-card
+                    class="mx-auto px-2 pt-6 animate__animated"
+                    @mouseover="animateButton"
+                    height="200px"
+                    flat
+                  >
                     <div align="center" justify="center">
                       <v-img
                         :src="offer.image"
@@ -497,7 +497,8 @@
                         </v-rating>
                         <v-spacer></v-spacer>
                         <v-btn
-                          class="text-none"
+                          class="text-none animate__animated"
+                          @mouseover="animateButton"
                           color="indigo-lighten-1"
                           size="large"
                           variant="flat"
@@ -708,6 +709,12 @@ export default {
       },
     ],
   }),
+  methods: {
+    animateButton(event) {
+      // Agrega la clase de animación cuando el ratón pasa por encima del botón
+      event.target.classList.add("animate__headShake");
+    },
+  },
 };
 </script>
 

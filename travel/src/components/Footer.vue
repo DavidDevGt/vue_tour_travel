@@ -34,7 +34,7 @@
             09:00-18:00 <br /></span
           ><br />
           <span class="text-caption"
-            ><v-icon class="mr-1">mdi mdi-map-marker</v-icon>2 Calle 8-71<br />
+            ><v-icon class="mr-1">mdi mdi-map-marker</v-icon>2 Calle 8-71 Local 42<br />
             Zona 9, Guatemala City</span
           ><br />
         </v-col>

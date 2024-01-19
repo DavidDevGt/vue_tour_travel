@@ -1,6 +1,5 @@
 <template>
   <v-app-bar height="80" color="#FEF5F8" scroll-behavior="elevate" id="inspire">
-    
     <v-img class="" src="/1.png"></v-img>
     <v-spacer></v-spacer>
     <v-menu transition="slide-x-transition">
@@ -60,8 +59,10 @@
       </template>
     </v-menu>
     <v-btn
-      class="text-none expl mr-8"
+      class="text-none expl mr-8 animate__animated"
+      @mouseover="animateButton"
       color="indigo-lighten-1"
+      style="scale: 0.9; font-weight: bold"
       size="x-large"
       variant="flat"
       rounded="0"
@@ -72,12 +73,19 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    animateButton(event) {
+      // Agrega la clase de animación cuando el ratón pasa por encima del botón
+      event.target.classList.add("animate__headShake");
+    },
+  },
+};
 </script>
 
 <style scope>
 .expl {
   background-color: white;
-  color: #165EA5;
+  color: #165ea5;
 }
 </style>
