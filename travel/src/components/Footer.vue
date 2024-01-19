@@ -6,8 +6,8 @@
           <h4 class="mt-2">Explore</h4>
           <span class="text-caption"
             >Lorem ipsum dolor<br />
-            amet consectetur. <br />Quisquam voluptatum, quibusdam,
-            <br /> voluptate, exercitationem quos</span
+            amet consectetur. <br />Quisquam voluptatum, quibusdam, <br />
+            voluptate, exercitationem quos</span
           ><br />
           <h4 class="mt-2">Follow Us</h4>
           <v-icon class="mr-1">mdi mdi-facebook</v-icon>
@@ -27,8 +27,7 @@
         <v-col cols="12" sm="3">
           <h4 class="mt-2">Contact Info</h4>
           <span class="text-caption"
-            ><v-icon class="mr-1">mdi mdi-phone</v-icon>5555-6969<br />
-            </span
+            ><v-icon class="mr-1">mdi mdi-phone</v-icon>5555-6969<br /> </span
           ><br />
           <span class="text-caption"
             ><v-icon class="mr-1">mdi mdi-clock-time-eight</v-icon>Mon-Fri
@@ -44,8 +43,8 @@
           <v-row>
             <v-col v-for="n in 6" :key="n" class="d-flex child-flex" cols="4">
               <v-img
-                :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
-                :lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`"
+                :src="`https://picsum.photos/500/300?image=${n * 8 + 10}`"
+                :lazy-src="`https://picsum.photos/10/6?image=${n * 8 + 10}`"
                 aspect-ratio="1"
                 cover
                 class="bg-grey-lighten-2"
@@ -59,7 +58,8 @@
     <div class="px-4 py-8 bgTop text-center w-100 text-black">
       <v-icon class="mr-2" color="black">mdi mdi-copyright</v-icon>
       <strong>
-        Copyright {{ new Date().getFullYear() }}. DavidDevGt
+        Copyright {{ new Date().getFullYear() }}.
+        <a href="https://daviddevgt.web.app" style="text-decoration: none;" class="text-black" target="_blank">DavidDevGt</a>
       </strong>
     </div>
   </v-footer>

@@ -34,11 +34,11 @@
               </v-btn>
             </v-col>
             <v-col cols="12" sm="6">
-              <v-img class="img1" src="/3.jpg"></v-img>
+              <v-img class="img1" src="/3.jpg" eager></v-img>
             </v-col>
           </v-row>
         </v-col>
-        <v-col cols="12" sm="12">
+        <v-col class="" cols="12" sm="12">
           <v-card flat>
             <v-tabs v-model="tab" color="indigo-lighten-1" align-tabs="center">
               <v-tab :value="1">
@@ -139,13 +139,16 @@
             </v-window>
           </v-card>
         </v-col>
-        <v-col cols="12" sm="12">
+        <v-col class="" cols="12" sm="12">
           <h4 class="text-center text-indigo-lighten-1">Featured Tours</h4>
           <h1 class="text-center">Beautiful Places Around The World</h1>
           <v-row justify="center">
             <v-col cols="12" sm="10">
               <v-row>
-                <v-col cols="12" sm="4">
+                <v-col
+                  cols="12"
+                  sm="4"
+                >
                   <v-hover v-slot="{ isHovering, props }">
                     <v-card
                       :elevation="isHovering ? 12 : 2"
@@ -168,243 +171,418 @@
                         </div>
                         <div class="text-white top">
                           <h1 class="mt-4">Paris</h1>
-                      <div>
-                        <p class="ma-0 text-body-1 font-weight-bold">Starting From $1500</p>
-                      </div>
-                    </div>
-                    <div class="d-flex justify-center">
-                      <v-btn v-for="(icon, index) in icons" :key="index" variant="text" :class="{ 'show-btns' : isHovering}" :color="transparent" :icon="icon"></v-btn>
-                    </div>
-                  </v-img>
-                  </v-card>
-                </v-hover>
-              </v-col>
-              <v-col cols="4" class="d-flex flex-column">
-                <v-row>
-                  <v-col cols="12" sm="12">
-                    <v-hover v-slot="{ isHovering, props}">
-                  <v-card :elevation="isHovering ? 12: 2" :class="{ 'on-hover':isHovering }" v-bind="props" class="card1">
-                  <v-img src="/6.png" cover height="100%">
-                    <div class="overlay"></div>
-
-                    <div class="d-flex flex-row-reverse">
-                      <v-btn class="text-none mr-2 mt-2" color="indigo-lighten-1" size="x-large" variant="flat" rounded="0" elevation="12">
-                        2 Packages
-                      </v-btn>
-                    </div>
-                    <div class="text-white ">
-                      <h1 class="mt-10 ml-4">Japon</h1>
-                      <div>
-                        <p class="ma-0 text-body-1 font-weight-bold ml-4">Starting From $1900</p>
-                      </div>
-                    </div>
-                    <div class="d-flex justify-center">
-                      <v-btn v-for="(icon, index) in icons" :key="index" variant="text" :class="{ 'show-btns' : isHovering}" :color="transparent" :icon="icon"></v-btn>
-                    </div>
-                  </v-img>
-                  </v-card>
-                </v-hover>
-                  </v-col>
-                  <v-col cols="12" sm="12">
-                    <v-hover v-slot="{ isHovering, props}">
-                  <v-card :elevation="isHovering ? 12: 2" :class="{ 'on-hover':isHovering }" v-bind="props" class="card1">
-                  <v-img src="/7.png" cover height="100%">
-                    <div class="d-flex flex-row-reverse">
-                      <v-btn class="text-none mr-2 mt-2" color="indigo-lighten-1" size="x-large" variant="flat" rounded="0" elevation="12">
-                        4 Packages
-                      </v-btn>
-                    </div>
-                    <div class="text-white ">
-                      <h1 class="mt-10 ml-4">Brazil</h1>
-                      <div>
-                        <p class="ma-0 text-body-1 font-weight-bold ml-4">Starting From $1500</p>
-                      </div>
-                    </div>
-                    <div class="d-flex justify-center">
-                      <v-btn v-for="(icon, index) in icons" :key="index" variant="text" :class="{ 'show-btns' : isHovering}" :color="transparent" :icon="icon"></v-btn>
-                    </div>
-                  </v-img>
-                  </v-card>
-                </v-hover>
-                  </v-col>
-                </v-row>
-              </v-col>
-              <v-col cols="12" sm="4">
-                <v-hover v-slot="{ isHovering, props}">
-                  <v-card :elevation="isHovering ? 12: 2" :class="{ 'on-hover':isHovering }" v-bind="props" class="card1">
-                  <v-img src="/8.png" cover height="100%">
-                    <div class="d-flex flex-row-reverse">
-                      <v-btn class="text-none mr-2 mt-2" color="indigo-lighten-1" size="x-large" variant="flat" rounded="0" elevation="12">
-                        5 Packages
-                      </v-btn>
-                    </div>
-                    <div class="text-white top">
-                      <h1 class="mt-4">London</h1>
-                      <div>
-                        <p class="ma-0 text-body-1 font-weight-bold">Starting From $1600</p>
-                      </div>
-                    </div>
-                    <div class="d-flex justify-center">
-                      <v-btn v-for="(icon, index) in icons" :key="index" variant="text" :class="{ 'show-btns' : isHovering}" :color="transparent" :icon="icon"></v-btn>
-                    </div>
-                  </v-img>
-                  </v-card>
-                </v-hover>
-              </v-col>
-
-            </v-row>
-          </v-col>
-        </v-row>
-      </v-col>
-      <v-col cols="12" sm="12">
-        <h4 class="text-center text-indigo-lighten-1">Popular Package</h4>
-        <h1 class="text-center">Checkout Our Packages</h1>
-        <v-row justify="center">
-          <v-col cols="12" sm="10">
-            <v-row>
-              <v-col cols="12" sm="3" v-for="(popular,i) in populars" :key="i">
-                <v-hover v-slot="{isHovering, props}">
-                <v-card class="mx-auto" color="grey-lighten-4" max-width="600" v-bind="props">
-                <v-img :aspect-ratio="16 /9" cover :src="popular.image">
-                <v-expand-transition>
-                  <div v-if="isHovering" class="d-flex transition-fast-in-fast-out bg-red-lighten-1 v-card--reveal" style="height: 100%">
+                          <div>
+                            <p class="ma-0 text-body-1 font-weight-bold">
+                              Starting From $1500
+                            </p>
+                          </div>
+                        </div>
+                        <div class="d-flex justify-center">
+                          <v-btn
+                            v-for="(icon, index) in icons"
+                            :key="index"
+                            variant="text"
+                            :class="{ 'show-btns': isHovering }"
+                            :color="transparent"
+                            :icon="icon"
+                          ></v-btn>
+                        </div>
+                      </v-img>
+                    </v-card>
+                  </v-hover>
+                </v-col>
+                <v-col cols="4" class="d-flex flex-column">
                   <v-row>
                     <v-col cols="12" sm="12">
-                      <h1 class="ml-4">{{ popular.subtitle1 }}</h1>
+                      <v-hover v-slot="{ isHovering, props }">
+                        <v-card
+                          :elevation="isHovering ? 12 : 2"
+                          :class="{ 'on-hover': isHovering }"
+                          v-bind="props"
+                          class="card1"
+                        >
+                          <v-img src="/6.png" cover height="100%">
+                            <div class="overlay"></div>
+
+                            <div class="d-flex flex-row-reverse">
+                              <v-btn
+                                class="text-none mr-2 mt-2"
+                                color="indigo-lighten-1"
+                                size="x-large"
+                                variant="flat"
+                                rounded="0"
+                                elevation="12"
+                              >
+                                2 Packages
+                              </v-btn>
+                            </div>
+                            <div class="text-white">
+                              <h1 class="mt-10 ml-4">Japon</h1>
+                              <div>
+                                <p
+                                  class="ma-0 text-body-1 font-weight-bold ml-4"
+                                >
+                                  Starting From $1900
+                                </p>
+                              </div>
+                            </div>
+                            <div class="d-flex justify-center">
+                              <v-btn
+                                v-for="(icon, index) in icons"
+                                :key="index"
+                                variant="text"
+                                :class="{ 'show-btns': isHovering }"
+                                :color="transparent"
+                                :icon="icon"
+                              ></v-btn>
+                            </div>
+                          </v-img>
+                        </v-card>
+                      </v-hover>
                     </v-col>
                     <v-col cols="12" sm="12">
-                      <h6 class="ml-4 mt-n4 mb-3">
-                        {{ popular.subtitle2 }}
-                      </h6>
+                      <v-hover v-slot="{ isHovering, props }">
+                        <v-card
+                          :elevation="isHovering ? 12 : 2"
+                          :class="{ 'on-hover': isHovering }"
+                          v-bind="props"
+                          class="card1"
+                        >
+                          <v-img src="/7.png" cover height="100%">
+                            <div class="d-flex flex-row-reverse">
+                              <v-btn
+                                class="text-none mr-2 mt-2"
+                                color="indigo-lighten-1"
+                                size="x-large"
+                                variant="flat"
+                                rounded="0"
+                                elevation="12"
+                              >
+                                4 Packages
+                              </v-btn>
+                            </div>
+                            <div class="text-white">
+                              <h1 class="mt-10 ml-4">Brazil</h1>
+                              <div>
+                                <p
+                                  class="ma-0 text-body-1 font-weight-bold ml-4"
+                                >
+                                  Starting From $1500
+                                </p>
+                              </div>
+                            </div>
+                            <div class="d-flex justify-center">
+                              <v-btn
+                                v-for="(icon, index) in icons"
+                                :key="index"
+                                variant="text"
+                                :class="{ 'show-btns': isHovering }"
+                                :color="transparent"
+                                :icon="icon"
+                              ></v-btn>
+                            </div>
+                          </v-img>
+                        </v-card>
+                      </v-hover>
                     </v-col>
                   </v-row>
-                  </div>
-                </v-expand-transition>
-              </v-img>
-              <v-card-text class="pt-6">
-                <div class="font-weight-light text-grey text-h6 mb-2">
-                  {{ popular.title }}
-                </div>
-              </v-card-text>
-              <v-card-actions>
-                <span class="text-grey-darken-2 text-caption me-2">
-                  ({{ rating }})
-                </span>
-                <v-rating v-model="rating" color="white" active-color="yellow-accent-4" half-increments hover size="18"></v-rating>
-                <v-spacer></v-spacer>
-                <v-btn class="text-none" color="indigo-lighten-1" size="large" variant="flat" rounded="0" elevation="6">$1200</v-btn>
-              </v-card-actions>
-                </v-card>
-                </v-hover>
-              </v-col>
-            </v-row>
-          </v-col>
-        </v-row>
-      </v-col>
-      <v-col cols="12" sm="12">
-        <h4 class="text-center text-indigo-lighten-1">Inventore Veritatis</h4>
-        <h1 class="text-center">Select Offres For Travelings</h1>
-        <v-row justify="center">
-          <v-col cols="12" sm="10">
-            <v-row>
-              <v-col cols="12" sm="2" v-for="(offer, i) in offers" :key="i">
-                <v-card class="mx-auto px-2 pt-6" height="200px" flat>
-                  <div align="center" justify="center">
-                    <v-img :src="offer.image" height="100px" width="100px" cover></v-img>
+                </v-col>
+                <v-col
 
-                  </div>
-                  <v-card-title class="text-center">
-                    <h6>{{ offer.title }}</h6>
-                  </v-card-title>
-                </v-card>
-              </v-col>
-            </v-row>
-          </v-col>
-        </v-row>
-      </v-col>
-      <v-col cols="12" sm="12">
-        <h4 class="text-center text-indigo-lighten-1">Popular Hotel</h4>
-        <h1 class="text-center">Most Popular Hotel</h1>
-        <v-row justify="center">
-          <v-col cols="12" sm="10">
-            <v-row>
-              <v-col cols="12" sm="3" v-for="(hotel, i) in hotels" :key="i">
-              <v-hover v-slot="{isHovering,props}">
-                <v-card class="mx-auto" color="grey-lighten-4" max-width="600" v-bind="props">
-                <v-img :aspect-ratio="16 /9" cover :src="hotel.image">
-                  <v-expand-transition>
-                    <div v-if="isHovering" class="d-flex transition-fast-in-fast-out bg-teal-lighten-1 v-card--reveal" style="height: 100%;">
-                    <v-row>
-                      <v-col cols="12" sm="12">
-                        <h1 class="ml-4">{{ hotel.subtitle1 }}</h1>
-                      </v-col>
-                      <v-col cols="12" sm="12">
-                        <h6 class="ml-4 mt-n4 mb-3">
-                          {{ hotel.subtitle2 }}
-                        </h6>
-                      </v-col>
-                    </v-row>
-                    </div>
-                  </v-expand-transition>
-                </v-img>
-                <v-card-text class="pt-6">
-                  <div class="font-weight-light text-grey text-h6 mb-2">
-                    {{ hotel.title }}
-                  </div>
-                  <div class="font-weight-light text-caption">
-                    <v-icon color="indigo-lighten-1">
-mdi mdi-map-marker
-                    </v-icon> Bali, Indonesha
-                  </div>
-                </v-card-text>
-                <v-card-actions>
-                  <span class="text-grey-darken-2 text-caption me-2">({{ rating }})</span>
-                  <v-rating v-model="rating" color="white" active-color="yellow-accent-4" half-increments hover size="18">
-                  </v-rating>
-                  <v-spacer></v-spacer>
-                  <v-btn class="text-none" color="indigo-lighten-1" size="large" variant="flat" rounded="0" elevation="6">$1200</v-btn>
-                </v-card-actions>
-                </v-card>
-              </v-hover>
+                  cols="12"
+                  sm="4"
+                >
+                  <v-hover v-slot="{ isHovering, props }">
+                    <v-card
+                      :elevation="isHovering ? 12 : 2"
+                      :class="{ 'on-hover': isHovering }"
+                      v-bind="props"
+                      class="card1"
+                    >
+                      <v-img src="/8.png" cover height="100%">
+                        <div class="d-flex flex-row-reverse">
+                          <v-btn
+                            class="text-none mr-2 mt-2"
+                            color="indigo-lighten-1"
+                            size="x-large"
+                            variant="flat"
+                            rounded="0"
+                            elevation="12"
+                          >
+                            5 Packages
+                          </v-btn>
+                        </div>
+                        <div class="text-white top">
+                          <h1 class="mt-4">London</h1>
+                          <div>
+                            <p class="ma-0 text-body-1 font-weight-bold">
+                              Starting From $1600
+                            </p>
+                          </div>
+                        </div>
+                        <div class="d-flex justify-center">
+                          <v-btn
+                            v-for="(icon, index) in icons"
+                            :key="index"
+                            variant="text"
+                            :class="{ 'show-btns': isHovering }"
+                            :color="transparent"
+                            :icon="icon"
+                          ></v-btn>
+                        </div>
+                      </v-img>
+                    </v-card>
+                  </v-hover>
+                </v-col>
+              </v-row>
             </v-col>
-            </v-row>
-          </v-col>
-        </v-row>
-      </v-col>
-      <v-col cols=12 sm="12">
+          </v-row>
+        </v-col>
+        <v-col class="" cols="12" sm="12">
+          <h4 class="text-center text-indigo-lighten-1">Popular Package</h4>
+          <h1 class="text-center">Checkout Our Packages</h1>
+          <v-row justify="center">
+            <v-col cols="12" sm="10">
+              <v-row>
+                <v-col
+                  cols="12"
+                  sm="3"
+                  v-for="(popular, i) in populars"
+                  :key="i"
+                >
+                  <v-hover v-slot="{ isHovering, props }">
+                    <v-card
+                      class="mx-auto"
+                      color="grey-lighten-4"
+                      max-width="600"
+                      v-bind="props"
+                    >
+                      <v-img :aspect-ratio="16 / 9" cover :src="popular.image">
+                        <v-expand-transition>
+                          <div
+                            v-if="isHovering"
+                            class="d-flex transition-fast-in-fast-out bg-red-lighten-1 v-card--reveal"
+                            style="height: 100%"
+                          >
+                            <v-row>
+                              <v-col cols="12" sm="12">
+                                <h1 class="ml-4">{{ popular.subtitle1 }}</h1>
+                              </v-col>
+                              <v-col cols="12" sm="12">
+                                <h6 class="ml-4 mt-n4 mb-3">
+                                  {{ popular.subtitle2 }}
+                                </h6>
+                              </v-col>
+                            </v-row>
+                          </div>
+                        </v-expand-transition>
+                      </v-img>
+                      <v-card-text class="pt-6">
+                        <div class="font-weight-light text-grey text-h6 mb-2">
+                          {{ popular.title }}
+                        </div>
+                      </v-card-text>
+                      <v-card-actions>
+                        <span class="text-grey-darken-2 text-caption me-2">
+                          ({{ rating }})
+                        </span>
+                        <v-rating
+                          v-model="rating"
+                          color="white"
+                          active-color="yellow-accent-4"
+                          half-increments
+                          hover
+                          size="18"
+                        ></v-rating>
+                        <v-spacer></v-spacer>
+                        <v-btn
+                          class="text-none"
+                          color="indigo-lighten-1"
+                          size="large"
+                          variant="flat"
+                          rounded="0"
+                          elevation="6"
+                          >$1200</v-btn
+                        >
+                      </v-card-actions>
+                    </v-card>
+                  </v-hover>
+                </v-col>
+              </v-row>
+            </v-col>
+          </v-row>
+        </v-col>
+        <v-col class="" cols="12" sm="12">
+          <h4 class="text-center text-indigo-lighten-1">Inventore Veritatis</h4>
+          <h1 class="text-center">Select Offres For Travelings</h1>
+          <v-row justify="center">
+            <v-col cols="12" sm="10">
+              <v-row>
+                <v-col cols="12" sm="2" v-for="(offer, i) in offers" :key="i">
+                  <v-card class="mx-auto px-2 pt-6" height="200px" flat>
+                    <div align="center" justify="center">
+                      <v-img
+                        :src="offer.image"
+                        height="100px"
+                        width="100px"
+                        cover
+                      ></v-img>
+                    </div>
+                    <v-card-title class="text-center">
+                      <h6>{{ offer.title }}</h6>
+                    </v-card-title>
+                  </v-card>
+                </v-col>
+              </v-row>
+            </v-col>
+          </v-row>
+        </v-col>
+        <v-col class="" cols="12" sm="12">
+          <h4 class="text-center text-indigo-lighten-1">Popular Hotel</h4>
+          <h1 class="text-center">Most Popular Hotel</h1>
+          <v-row justify="center">
+            <v-col cols="12" sm="10">
+              <v-row>
+                <v-col cols="12" sm="3" v-for="(hotel, i) in hotels" :key="i">
+                  <v-hover v-slot="{ isHovering, props }">
+                    <v-card
+                      class="mx-auto"
+                      color="grey-lighten-4"
+                      max-width="600"
+                      v-bind="props"
+                    >
+                      <v-img :aspect-ratio="16 / 9" cover :src="hotel.image">
+                        <v-expand-transition>
+                          <div
+                            v-if="isHovering"
+                            class="d-flex transition-fast-in-fast-out bg-teal-lighten-1 v-card--reveal"
+                            style="height: 100%"
+                          >
+                            <v-row>
+                              <v-col cols="12" sm="12">
+                                <h1 class="ml-4">{{ hotel.subtitle1 }}</h1>
+                              </v-col>
+                              <v-col cols="12" sm="12">
+                                <h6 class="ml-4 mt-n4 mb-3">
+                                  {{ hotel.subtitle2 }}
+                                </h6>
+                              </v-col>
+                            </v-row>
+                          </div>
+                        </v-expand-transition>
+                      </v-img>
+                      <v-card-text class="pt-6">
+                        <div class="font-weight-light text-grey text-h6 mb-2">
+                          {{ hotel.title }}
+                        </div>
+                        <div class="font-weight-light text-caption">
+                          <v-icon color="indigo-lighten-1">
+                            mdi mdi-map-marker
+                          </v-icon>
+                          Bali, Indonesha
+                        </div>
+                      </v-card-text>
+                      <v-card-actions>
+                        <span class="text-grey-darken-2 text-caption me-2"
+                          >({{ rating }})</span
+                        >
+                        <v-rating
+                          v-model="rating"
+                          color="white"
+                          active-color="yellow-accent-4"
+                          half-increments
+                          hover
+                          size="18"
+                        >
+                        </v-rating>
+                        <v-spacer></v-spacer>
+                        <v-btn
+                          class="text-none"
+                          color="indigo-lighten-1"
+                          size="large"
+                          variant="flat"
+                          rounded="0"
+                          elevation="6"
+                          >$1200</v-btn
+                        >
+                      </v-card-actions>
+                    </v-card>
+                  </v-hover>
+                </v-col>
+              </v-row>
+            </v-col>
+          </v-row>
+        </v-col>
+        <v-col class="" cols="12" sm="12">
           <h4 class="text-center text-indigo-lighten-1">Our Gallery</h4>
           <h1 class="text-center">Best Traveler Share A photo</h1>
           <v-sheet class="mx-auto" elevation="8" max-width="1200">
-            <v-slide-group v-model="model" class="pa-4" center-active show-arrows>
-              <v-slide-group-item v-for="travel in travels" :key="travel" v-slot="{isSelected, toggle}">
-                <v-card :color="isSelected ? 'primary' : 'grey-lighten-1'" class="ma-4" height="200" width="130" @click="toggle" flat>
+            <v-slide-group
+              v-model="model"
+              class="pa-4"
+              center-active
+              show-arrows
+            >
+              <v-slide-group-item
+                v-for="travel in travels"
+                :key="travel"
+                v-slot="{ isSelected, toggle }"
+              >
+                <v-card
+                  :color="isSelected ? 'primary' : 'grey-lighten-1'"
+                  class="ma-4"
+                  height="200"
+                  width="130"
+                  @click="toggle"
+                  flat
+                >
                   <div class="d-flex fill-height align-center justify-center">
-                    <v-img :src="travel.image" cover height="100%" width="100%"></v-img>
+                    <v-img
+                      :src="travel.image"
+                      cover
+                      height="100%"
+                      width="100%"
+                    ></v-img>
                   </div>
                 </v-card>
               </v-slide-group-item>
             </v-slide-group>
           </v-sheet>
-      </v-col>
-      <v-col cols="12" sm="12">
-        <v-card>
-          <v-img src="/p.jpg" cover height="100%">
-            <div class="d-flex justify-center ligne1">
-              <h1 class="text-white text-h3 mb-5">Sign up for our newsletter</h1>
-            </div>
-            <div class="d-flex justify-center ligne2">
-              <v-text-field density="compact" placeholder="Enter your e-mail here" variant="solo-inverted" color="#393E50" rounded="0"></v-text-field>
-              <v-btn class="text-none tp" color="indigo-lighten-1" size="large" variant="flat" rounded="0" elevation="12">
-                Subscribe Now
-              </v-btn>
-            </div>
-          </v-img>
-        </v-card>
-      </v-col>
- </v-row>
-  </v-container>
-</v-main>
-<Footer />
+        </v-col>
+        <v-col class="" cols="12" sm="12">
+          <v-card>
+            <v-img src="/p.jpg" cover height="100%">
+              <div class="d-flex justify-center ligne1">
+                <h1 class="text-white text-h3 mb-5">
+                  Sign up for our newsletter
+                </h1>
+              </div>
+              <div class="d-flex justify-center ligne2">
+                <v-text-field
+                  density="compact"
+                  placeholder="Enter your e-mail here"
+                  variant="solo-inverted"
+                  color="#393E50"
+                  rounded="0"
+                ></v-text-field>
+                <v-btn
+                  class="text-none tp"
+                  color="indigo-lighten-1"
+                  size="large"
+                  variant="flat"
+                  rounded="0"
+                  elevation="12"
+                >
+                  Subscribe Now
+                </v-btn>
+              </div>
+            </v-img>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-main>
+  <Footer />
 </template>
 
 <script setup>
